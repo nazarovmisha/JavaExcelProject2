@@ -1,8 +1,12 @@
-import java.util.Comparator;
+import org.apache.commons.lang3.StringUtils;
 
-public class UniversityIdComparator implements Comparator<University> {
+
+public class UniversityIdComparator implements UniversityComparator {
     @Override
     public int compare(University o1, University o2) {
-        return o1.getId().compareTo(o2.getId());
+        return StringUtils.compare(o1.getId(),o2.getId());
     }
+
+
+
 }

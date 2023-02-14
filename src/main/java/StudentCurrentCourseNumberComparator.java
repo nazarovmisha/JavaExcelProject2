@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class StudentCurrentCourseNumberComparator implements Comparator<Student> {
+public class StudentCurrentCourseNumberComparator implements StudentComparator {
 
 
     @Override

@@ -1,4 +1,4 @@
 import java.util.Comparator;
 
-public interface UniversityComparator extends Comparator<Student> {
+public interface UniversityComparator extends Comparator<University> {
 }
