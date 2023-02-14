@@ -18,8 +18,8 @@ public class Input {
     public static List<Student> inputStudents(String str) throws IOException {
         List<Student> listStudents = new ArrayList();
 
-        File file = new File(str);
-        FileInputStream fis = new FileInputStream(file);
+
+        FileInputStream fis = new FileInputStream(str);
         XSSFWorkbook workbook = new XSSFWorkbook(fis);
         XSSFSheet sheetStudents = workbook.getSheetAt(0);
         Iterator<Row> rowIteratorStudents = sheetStudents.iterator();
@@ -28,8 +28,8 @@ public class Input {
             Row rowStudents = rowIteratorStudents.next();
             Student student = new Student();
             listStudents.add(student);
-            student.setFullName(rowStudents.getCell(0).getStringCellValue());
-            student.setUniversityId(rowStudents.getCell(1).getStringCellValue());
+            student.setUniversityId(rowStudents.getCell(0).getStringCellValue());
+            student.setFullName(rowStudents.getCell(1).getStringCellValue());
             student.setCurrentCourseNumber((int) rowStudents.getCell(2).getNumericCellValue());
             student.setAvgExamScore((float) rowStudents.getCell(3).getNumericCellValue());
 
